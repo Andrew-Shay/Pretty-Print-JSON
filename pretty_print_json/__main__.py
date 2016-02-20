@@ -1,18 +1,14 @@
-# ---------------------------------------------------------------------------
-#   Author - Andrew Shay
-#   Date: 10/28/2015
-#   Description: Easy tool for printing pretty JSON
-# ---------------------------------------------------------------------------
+#!/usr/bin/env python
 
-import sys
-import json
 import argparse
+import json
+import sys
 
-version = "1.0.1"
+__author__ = "Andrew Shay"
+__version__ = "1.1.0"
 
 
 def get_commands():
-
     parser = argparse.ArgumentParser(prog='ppj',
                                      description='Prints pretty JSON')
     subparsers = parser.add_subparsers()
@@ -40,7 +36,7 @@ def main():
     commands = get_commands()
 
     if commands.which == 'version':
-        print("v" + version)
+        print("v" + __version__)
         return True
 
     if commands.which == 'p':
@@ -79,6 +75,7 @@ def main():
                 return_code = 4
 
     return return_code
+
 
 if __name__ == '__main__':
     exit_code = main()
