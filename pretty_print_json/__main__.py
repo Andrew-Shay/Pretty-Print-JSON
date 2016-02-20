@@ -47,7 +47,7 @@ def main():
 
         try:
             json_file = open(commands.file_loc, "r").read()
-        except Exception, e:
+        except Exception as e:
             print("[ERROR] Unable to open file")
             print(e)
             return 2
@@ -55,7 +55,7 @@ def main():
         try:
             pretty_json = json.dumps(json.loads(json_file), sort_keys=True,
                                      indent=4, separators=(',', ': '))
-        except Exception, e:
+        except Exception as e:
             print("[ERROR] Invalid JSON")
             print(e)
             return 1
@@ -65,7 +65,7 @@ def main():
         if commands.overwrite:
             try:
                 open(commands.file_loc, "w").write(pretty_json)
-            except Exception, e:
+            except Exception as e:
                 print("[ERROR] Unable to overwrite file")
                 print(e)
                 return_code = 3
@@ -73,7 +73,7 @@ def main():
         if commands.file is not None:
             try:
                 open(commands.file, "w").write(pretty_json)
-            except Exception, e:
+            except Exception as e:
                 print("[ERROR] Unable to write new file")
                 print(e)
                 return_code = 4
