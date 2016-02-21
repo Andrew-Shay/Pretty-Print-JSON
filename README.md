@@ -19,5 +19,5 @@ Command line tool for printing pretty JSON
 `pip install pretty_print_json`
 
 # Requirements
-Python 2.7  
+Python 3.5 or 2.7
 PIP
