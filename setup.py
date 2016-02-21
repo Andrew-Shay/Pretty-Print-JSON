@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pretty_print_json',
-    version='1.1.0',
+    version='1.1.1',
     description='Tool for printing pretty JSON',
     long_description='Tool for printing pretty JSON',
     url='http://andrewshay.me',
