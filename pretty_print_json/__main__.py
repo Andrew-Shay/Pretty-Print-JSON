@@ -29,7 +29,8 @@ def main():
     commands = get_commands()
 
     try:
-        json_file = open(commands.path, "r").read()
+        with open(commands.path, "r") as f:
+            json_file = f.read()
     except Exception as e:
         print("[ERROR] Unable to open file")
         print(e)
@@ -47,15 +48,17 @@ def main():
 
     if commands.overwrite:
         try:
-            open(commands.path, "w").write(pretty_json)
+            with open(commands.path, "w") as f:
+                f.write(pretty_json)
         except Exception as e:
             print("[ERROR] Unable to overwrite file")
             print(e)
             return_code = 3
 
-    if commands.file is not None:
+    if commands.file:
         try:
-            open(commands.file, "w").write(pretty_json)
+            with open(commands.file, "w") as f:
+                f.write(pretty_json)
         except Exception as e:
             print("[ERROR] Unable to write new file")
             print(e)
