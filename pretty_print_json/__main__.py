@@ -14,10 +14,10 @@ def get_commands():
 
     parser.add_argument('path', help='Path to JSON file')
     parser.add_argument("-o", "--overwrite",
-                   help="Overwrites original file with pretty JSON",
-                   action="store_true")
+                        help="Overwrites original file with pretty JSON",
+                        action="store_true")
     parser.add_argument("-f", "--file",
-                   help="Write pretty JSON to specific file")
+                        help="Write pretty JSON to specific file")
 
     commands = parser.parse_args()
     return commands
