@@ -8,6 +8,7 @@ setup(
     url='http://andrewshay.me',
     author='Andrew Shay',
     author_email='andrew.shay@andrewshay.me',
+    license='MIT',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
