@@ -7,13 +7,13 @@ Command line tool for printing pretty JSON
 `ppj -h`
 
 #### Pretty Print JSON
-`ppj p FILE_NAME`
+`ppj FILE_PATH`
 
 #### Overwrite JSON file
-`ppj p FILE_NAME -o`
+`ppj FILE_PATH -o`
 
 #### Write new file
-`ppj p FILE_NAME -f NEW_FILE_NAME`
+`ppj FILE_PATH -f NEW_FILE_PATH`
 
 # Install
 `pip install pretty_print_json`
