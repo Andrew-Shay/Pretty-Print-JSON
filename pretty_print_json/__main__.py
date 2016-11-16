@@ -5,7 +5,7 @@ import json
 import sys
 
 __author__ = "Andrew Shay"
-__version__ = "2.0.0"
+__version__ = "2.0.3"
 
 
 def get_commands():
